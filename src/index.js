@@ -29,16 +29,12 @@ const NotHiring = () =>
     </div>
 
 class Library extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            open: true,
-            freeBookMark: true,
-            hiring: false
-        }
-        this.toggleOpenClosed = this.toggleOpenClosed.bind(this)
+    state = {
+        open: true,
+        freeBookMark: true,
+        hiring: false
     }
-    toggleOpenClosed() {
+    toggleOpenClosed = () => {
         this.setState(prevState => ({
             open: !prevState.open
         }))
