@@ -34,6 +34,15 @@ class Library extends Component {
         freeBookMark: true,
         hiring: false
     }
+
+    componentDidMount() {
+        console.log("The component is mounted.")
+    }
+
+    componentDidUpdate() {
+        console.log("The component just updated.")
+    }
+
     toggleOpenClosed = () => {
         this.setState(prevState => ({
             open: !prevState.open
